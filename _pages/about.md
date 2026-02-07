@@ -6,7 +6,7 @@ subtitle: Ph.D. Student in Electrical and Computer Engineering, University of Br
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 
   image_circular: false
   more_info: >
     <p>ECE, University of British Columbia</p>
