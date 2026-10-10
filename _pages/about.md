@@ -6,7 +6,7 @@ subtitle: Ph.D. Student in Electrical and Computer Engineering, University of Br
 
 profile:
   align: right
-  image:
+  image: xuanqi_profile.png
   image_circular: false
   more_info: >
     <p>ECE, University of British Columbia</p>
