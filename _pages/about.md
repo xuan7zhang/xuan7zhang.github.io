@@ -13,7 +13,11 @@ profile:
     <p>Vancouver, BC, Canada</p>
     <p>xzhan567@student.ubc.ca</p>
 
-news: true
+announcements:
+  enabled: true
+  scrollable: true
+  limit: 5
+
 selected_papers: true
 social: true
 ---
