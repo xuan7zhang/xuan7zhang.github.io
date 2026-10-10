@@ -14,7 +14,7 @@ profile:
     <p>xzhan567@student.ubc.ca</p>
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true
   limit: 5
 
