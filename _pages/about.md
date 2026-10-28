@@ -19,6 +19,7 @@ announcements:
   limit: 5
 
 selected_papers: true
+honors_service: true
 social: true
 ---
 
