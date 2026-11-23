@@ -43,13 +43,8 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
-    # ===== GitHub Pages 官方环境 =====
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout 🛎️
@@ -96,6 +91,18 @@ jobs:
         with:
           path: _site
 
+  # Deploy runs as its own job so the github-pages artifact from build is finalized first
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    # ===== GitHub Pages 官方环境 =====
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
