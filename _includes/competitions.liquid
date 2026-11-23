@@ -1,0 +1,78 @@
+<h2>Selected Competitions</h2>
+
+<style>
+  .competition-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(184, 134, 11, 0.45);
+    border-radius: 0.6rem;
+    background-color: rgba(218, 165, 32, 0.07);
+  }
+  .competition-thumb {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .competition-thumb.has-img {
+    flex-basis: 130px;
+  }
+  .competition-thumb img {
+    width: 100%;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  .competition-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.3rem;
+    background-color: #9a6b00;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .competition-thumb.has-img .competition-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: -0.5rem;
+  }
+  .competition-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+  .competition-detail {
+    color: var(--global-text-color-light);
+  }
+  @media (max-width: 576px) {
+    .competition-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .competition-thumb.has-img {
+      flex-basis: auto;
+      width: 160px;
+    }
+  }
+</style>
+
+{% capture pbvs_certificate %}{% file_exists assets/img/competitions/pbvs2025_certificate.png %}{% endcapture %}
+<div class="competition-card">
+  <div class="competition-thumb{% if pbvs_certificate == 'true' %} has-img{% endif %}">
+    {% if pbvs_certificate == 'true' %}
+      <img
+        src="{{ '/assets/img/competitions/pbvs2025_certificate.png' | relative_url }}"
+        alt="PBVS 2025 Thermal Image Super-Resolution Challenge winner certificate"
+      >
+    {% endif %}
+    <span class="competition-badge">CVPR PBVS 2025</span>
+  </div>
+  <div>
+    <div class="competition-title">IEEE CVPR 2025 PBVS Thermal Image Super-Resolution Challenge - Track 2</div>
+    <div class="competition-detail">
+      <strong>1st Place</strong>, Track 2 (×16 PSNR), 6th Thermal Image Super-Resolution Challenge, IEEE/CVF PBVS Workshop
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Ph.D. Student in Electrical and Computer Engineering, University of British Columbia
 
@@ -19,6 +19,7 @@ announcements:
   limit: 5
 
 selected_papers: true
+competitions: true
 honors_service: true
 social: true
 ---
